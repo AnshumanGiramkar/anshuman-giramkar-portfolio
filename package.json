@@ -1,15 +1,21 @@
 {
-  "name": "arcade-portfolio",
+  "name": "anshumangiramkar-portfolio",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
+    "prepare:hero": "node scripts/prepare-hero-frames.mjs",
+    "predev": "npm run prepare:hero",
     "dev": "astro dev",
+    "prebuild": "npm run prepare:hero",
     "build": "astro build",
     "preview": "astro preview"
   },
   "dependencies": {
     "astro": "^5.2.0",
-    "gsap": "^3.12.5"
+    "gsap": "^3.15.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }
